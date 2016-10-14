@@ -18,20 +18,26 @@
 			font-size: 280%;
 			padding-top: 10px;
 			text-align: center;
+			top: 50%;
+			left: 50%;
 		}
 		#caption
 		{
 			color: white;
 			font-size: 120%;
 			text-align: center;
+			top: 50%;
+			left: 50%;
 		}
 
 		/* NAVIGATION PANE */
 		#navigationPane
 		{
-			padding-left: 150px;
-			padding-top: 50px;
 			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -100px;
+			margin-left: -350px;
 		}
 		#navOption
 		{
@@ -41,8 +47,6 @@
 			color: white;
 			width: 100px;
 			height: 60px;
-			display: inline-block;
-			outline: none;
 			box-shadow: -4px -4px #999;
 		}
 		#navOption:hover
@@ -60,17 +64,18 @@
 		/* MAIN WINDOW */
 		#mainWindow
 		{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-top: -200px;
+			margin-left: -300px;
+
+			height: 400px;
+			width: 600px;
 			border: 1px solid white;
 			font-size: 80%;
-			width: 50%;
-			height: 50%;
 			color: white;
 			text-align: left;
-			position: absolute;
-			left: 275px;
-			top: 160px;
-			padding-left: 10px;
-			padding-top: 10px;
 			background-color: #000000;
 		}
 
@@ -85,11 +90,11 @@
 
 		<div id="header">
 			<div id="title" align="center">Sunil Rao</div>
-			<div id="caption" align="center">Interactive Media & Web Developer</div>
+			<div id="caption" align="center">Interactive Media Creator & Full Stack Web Developer</div>
 			<hr>
 		</div>
 
-		<div id="navigationPane" align="left">
+		<div id="navigationPane" align="center">
 			<button id="navOption">Home</button>
 			<br><br>
 			<button id="navOption">Work</button>
@@ -97,10 +102,13 @@
 			<button id="navOption">Resume/CV</button>
 		</div>
 
+		
 		<div id="mainWindow" align="center">
-			Welcome!<br>
+			Welcome!
+			<br>
 			This is a website ya dingus.
 		</div>
+		
 
 		<!-- three.js background animation !-->
 		<div id="bgAnimation" style="width:100%; height:10%; margin:0">

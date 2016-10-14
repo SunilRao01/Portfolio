@@ -53,9 +53,9 @@ function initialize()
 	for (var j = 0; j < numLines; j++)
 	{
 		var geometry = new THREE.Geometry();
-		var yPos = 320 - (j * divisionSpace);
-		var minX = -1000;
-		var maxX = 1000;
+		var yPos = 500 - (j * divisionSpace);
+		var minX = -1200;
+		var maxX = 1200;
 		var subdivisions = 20;
 		var subUnit = (maxX - minX) / subdivisions;
 
@@ -77,9 +77,12 @@ function initialize()
 		lines.push(line);
 
 		scene.add(line);
+
 	}
 
 }
+
+
 
 function animate()
 {
