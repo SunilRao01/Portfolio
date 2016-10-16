@@ -21,6 +21,12 @@ function initialize()
 						    		};
 								})(label);
 	}
+
+	// Make all views invisible, except 'Home' page
+	document.getElementById("homeWindow").style.display = "block";
+	document.getElementById("workWindow").style.display = "none";
+	document.getElementById("resumeWindow").style.display = "none";
+	document.getElementById("aboutWindow").style.display = "none";
 }
 
 function displayView(viewLabel)
