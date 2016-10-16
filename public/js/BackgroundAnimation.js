@@ -21,11 +21,11 @@ var alpha = 10;
 var beta = 10;
 
 
-initialize()
+initializeBackground();
 
 animate();
 
-function initialize()
+function initializeBackground()
 {
 	container = document.getElementById('bgAnimation');
 	scene = new THREE.Scene();
