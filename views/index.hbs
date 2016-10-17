@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="/jquery-ui/jquery-ui.min.css">
+		<script src="/jquery-ui/external/jquery/jquery.js"></script>
+		<script src="/jquery-ui/jquery-ui.min.js"></script>
+
 		<style>
 		#credits
 		{
@@ -78,8 +82,16 @@
 			text-align: left;
 			background-color: #000000;
 		}
-
+		.card
+		{
+			border: 0px;
+		}
+		.card:hover
+		{
+			border: 1px solid red;
+		}
 		</style>
+
 		<meta charset=utf-8>
 		<title>Portfolio</title>
 	</head>
@@ -114,10 +126,15 @@
 				This is the home page.
 			</div>
 
-			<div id="workWindow">
-				Welcome!
-				<br>
-				This is the work page.
+			<div id="workWindow">  
+				<fieldset>
+					<legend>Interactive</legend>
+					Element 1
+				</fieldset>
+				<fieldset>
+					<legend>Web</legend>
+					Element 1
+				</fieldset>
 			</div>
 
 			<div id="resumeWindow">

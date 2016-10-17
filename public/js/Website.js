@@ -31,5 +31,10 @@ function initialize()
 
 function displayView(viewLabel)
 {
-	console.log("display " + viewLabel + " view");
+	document.getElementById("homeWindow").style.display = "none";
+	document.getElementById("workWindow").style.display = "none";
+	document.getElementById("resumeWindow").style.display = "none";
+	document.getElementById("aboutWindow").style.display = "none";
+
+	document.getElementById(viewLabel + "Window").style.display = "block";
 }
