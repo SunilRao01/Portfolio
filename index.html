@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-<title>W3.CSS Template</title>
+<title>Sunil's Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
@@ -60,21 +60,30 @@ body, html {
 
 <body>
 
-<!-- Navbar (sit on top) -->
 <!-- Navbar -->
 <div class="w3-top">
-<ul class="w3-navbar w3-black w3-card-2 w3-left-align">
+<ul class="w3-navbar w3-black w3-card-2 w3-left-align" id="myNavBar">
   <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
     <a class="w3-padding-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
   </li>
   <li><a href="#" class="w3-hover-none w3-hover-text-grey w3-padding-large">HOME</a></li>
   <li class="w3-hide-small"><a href="#projects" class="w3-padding-large">PROJECTS</a></li>
-  <li class="w3-hide-small"><a href="#aboutme" class="w3-padding-large">ABOUT</a></li>
+  <li class="w3-hide-small"><a href="#about" class="w3-padding-large">ABOUT</a></li>
   <li class="w3-hide-small"><a href="#contact" class=" w3-padding-large">CONTACT</a></li>
   
   <li class="w3-hide-small w3-right"><a href="javascript:void(0)" class="w3-padding-large w3-hover-red"><i class="fa fa-search"></i></a></li>
 </ul>
 </div>
+
+<!-- Navbar on small screens -->
+<div id="navDemo" class="w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  <ul class="w3-navbar w3-left-align w3-black">
+    <li><a class="w3-padding-large" href="#projects">PROJECTS</a></li>
+    <li><a class="w3-padding-large" href="#about">TOUR</a></li>
+    <li><a class="w3-padding-large" href="#contact">CONTACT</a></li>
+  </ul>
+</div>
+
 
 <!-- First Parallax Image with Logo Text -->
 <div id="bgAnimation">
@@ -162,7 +171,7 @@ body, html {
 </div>
 
 <!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="aboutme">
+<div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">ABOUT ME</h3>
   <p class="w3-center"><em>I love photography</em></p>
   <p>We have created a fictional "personal" website/blog, and our fictional character is a hobby photographer. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -234,7 +243,7 @@ body, html {
     </div>
     <div class="w3-col m8 w3-container w3-section">
       <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Portland, US<br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Portland, OR<br>
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +1 (630) 457-6692<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: srao0194@gmail.com<br>
       </div>
@@ -256,20 +265,17 @@ body, html {
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16 w3-opacity w3-hover-opacity-off">
   <div class="w3-xlarge w3-padding-32">
-    <a href="#" class="w3-hover-text-indigo"><i class="fa fa-facebook-official"></i></a>
-    <a href="#" class="w3-hover-text-red"><i class="fa fa-pinterest-p"></i></a>
-     <a href="#" class="w3-hover-text-light-blue"><i class="fa fa-twitter"></i></a>
-    <a href="#" class="w3-hover-text-grey"><i class="fa fa-flickr"></i></a>
-    <a href="#" class="w3-hover-text-indigo"><i class="fa fa-linkedin"></i></a>
+    <a target="_blank" href="https://twitter.com/SunilRao101" class="w3-hover-text-light-blue"><i class="fa fa-twitter"></i></a>
+    <a target="_blank" href="https://www.linkedin.com/in/srao0194" class="w3-hover-text-indigo"><i class="fa fa-linkedin"></i></a>
   </div>
-  <p>Powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <p>Created by Sunil Rao, powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
  
 <!-- Add Google Maps -->
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script>
 <!-- Google Map Location -->
-var myCenter = new google.maps.LatLng(41.878114, -87.629798);
+var myCenter = new google.maps.LatLng(45.512893, -122.685386);
 
 function initialize() {
 var mapProp = {
@@ -299,6 +305,17 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 
+// Used to toggle the menu on small screens when clicking on the menu button
+function myFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else { 
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+
+/*
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
 function myFunction() {
@@ -309,6 +326,7 @@ function myFunction() {
         navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
     }
 }
+*/
 </script>
 
 </body>
