@@ -13,7 +13,10 @@ body, html {
     line-height: 1.8;
     max-width: 100%;
 }
-
+p.small
+{
+  line-height: 120%;
+}
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
     opacity: 0.7;
@@ -22,7 +25,6 @@ body, html {
     background-repeat: no-repeat;
     background-size: cover;
 }
-
 /* First image (Logo. Full height) */
 .bgimg-1 {
     background-image: url('images/hot_takes_escape.gif');
@@ -91,10 +93,15 @@ body, html {
     <script src="three.js"></script>
     <script src="BackgroundAnimation.js"></script>
 
-    <div class="w3-display-middle w3-center" style="height:70%;resize:horizontal;overflow:auto;">
-        <span class="w3-padding-small w3-black w3-xxlarge">Sunil Rao</span><br><br>
-        
-        <span class="w3-padding-small w3-black w3-medium"><a>Interactive Media Creator & Full Stack Web Developer</a></span>
+    <div class="w3-display-middle w3-center" style="height:70%;resize:horizontal;width:100%">
+        <span class="w3-black w3-xxxlarge">Sunil Rao</span>
+        <br>
+        <span class="w3-black w3-small">
+          <p class="small">
+          Interactive Media Creator
+          <br>+<br>
+          Full Stack Web Developer</p>
+        </span>
     </div>
 </div>
 
