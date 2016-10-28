@@ -29,6 +29,7 @@ function initializeBackground()
 {
 	container = document.getElementById('bgAnimation');
 	scene = new THREE.Scene();
+	scene.background = new THREE.Color(0x000000);
 	camera = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2
 				, window.innerHeight / 2, (window.innerHeight / -2), 1, 1000);
 
