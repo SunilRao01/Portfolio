@@ -74,7 +74,7 @@ p.small
   <li class="w3-hide-small"><a href="#about" class="w3-padding-large">ABOUT</a></li>
   <li class="w3-hide-small"><a href="#contact" class=" w3-padding-large">CONTACT</a></li>
   
-  <li class="w3-hide-small w3-right"><a href="javascript:void(0)" class="w3-padding-large w3-hover-red"><i class="fa fa-search"></i></a></li>
+  <li class="w3-hide-small w3-right"><a href="javascript:void(0)" class="w3-padding-large w3-hover-red"></a></li>
 </ul>
 </div>
 
@@ -91,7 +91,7 @@ p.small
 <!-- Header with WebGL animating in background -->
 <div id="bgAnimation">
     <script src="three.js"></script>
-    <script src="BackgroundAnimation.js"></script>
+    <script src="js/BackgroundAnimation.js"></script>
 
     <div class="w3-display-middle w3-center" style="height:70%;resize:horizontal;width:100%">
         <span class="w3-black w3-xxxlarge">Sunil Rao</span>
@@ -105,13 +105,24 @@ p.small
     </div>
 </div>
 
+<div id="parallaxAnimation1" style="margin-top:-7.1px;">
+   <script src="js/Parallax_1.js"></script>
 
-<!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-1 w3-display-container" id="projects" style="top:-10px">
-  <div class="w3-display-middle">
+   <div id="projects" class="w3-display-middle">
+   <br>
+   <br>
+   <br>
+   <br>
     <span class="w3-xxlarge w3-text-light-grey w3-wide">PROJECTS</span>
   </div>
 </div>
+
+<!--
+Second Parallax Image with Portfolio Text 
+<div class="bgimg-1 w3-display-container" id="projects" style="top:-10px">
+
+</div>
+!-->
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64">
@@ -219,9 +230,15 @@ p.small
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-1 w3-display-container" id="contact">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-light-grey w3-wide">CONTACT</span>
+<div id="parallaxAnimation2" style="margin-top:-50px;">
+   <script src="js/Parallax_2.js"></script>
+
+   <div id="contact" class="w3-center" style="margin-top: -200px;">
+   <br>
+   <br>
+   <br>
+   <br>
+    <span class="w3-xxlarge w3-text-light-grey w3-wide">CONTACT</span>
   </div>
 </div>
 

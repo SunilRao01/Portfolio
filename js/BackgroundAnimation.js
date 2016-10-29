@@ -12,7 +12,7 @@ var oscillateDelay = 10;
 
 
 var numLines = 10;
-var divisionSpace = 100;
+var divisionSpace = 150;
 
 var theta = 20;
 var thetaRate = 0.001;
