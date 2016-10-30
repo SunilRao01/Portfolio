@@ -17,31 +17,6 @@ p.small
 {
   line-height: 120%;
 }
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-    opacity: 0.7;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-/* First image (Logo. Full height) */
-.bgimg-1 {
-    background-image: url('images/hot_takes_escape.gif');
-    min-height: 25%;
-}
-
-/* Second image (Portfolio) */
-.bgimg-2 {
-    background-image: url("/w3images/parallax2.jpg");
-    min-height: 400px;
-}
-
-/* Third image (Contact) */
-.bgimg-3 {
-    background-image: url("/w3images/parallax3.jpg");
-    min-height: 400px;
-}
 
 .w3-wide {letter-spacing: 10px;}
 .w3-halfWide{letter-spacing: 2px;}
@@ -69,9 +44,9 @@ p.small
   <li class="w3-hide-medium w3-hide-large w3-opennav w3-right">
     <a class="w3-padding-large" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
   </li>
-  <li><a href="#" class="w3-hover-none w3-hover-text-grey w3-padding-large">HOME</a></li>
-  <li class="w3-hide-small"><a href="#projects" class="w3-padding-large">PROJECTS</a></li>
+  <li><a href="#" class="w3-padding-large">HOME</a></li>
   <li class="w3-hide-small"><a href="#about" class="w3-padding-large">ABOUT</a></li>
+  <li class="w3-hide-small"><a href="#projects" class="w3-padding-large">PROJECTS</a></li>
   <li class="w3-hide-small"><a href="#contact" class=" w3-padding-large">CONTACT</a></li>
   
   <li class="w3-hide-small w3-right"><a href="javascript:void(0)" class="w3-padding-large w3-hover-red"></a></li>
@@ -105,21 +80,69 @@ p.small
     </div>
 </div>
 
-<div id="parallaxAnimation1" style="margin-top:-8px;">
-   <script src="js/Parallax_1.js"></script>
 
-   <div id="projects" class="w3-center" style="margin-top: -120px;"">
-    <span class="w3-center w3-xxlarge w3-black w3-wide w3-padding-small">PROJECTS</span>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h3 class="w3-center">ABOUT ME</h3>
+
+  <center><p><em>Fancy italics</em></p></center>
+  <p>[Bio text goes here]</p>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <p><b>[Some title]</b></p><br>
+      <img src="/images/sloth.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="[Image caption]">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>[More text]</p>
+    </div>
   </div>
-
+  <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
+  <p class="w3-wide">Eating</p>
+  <div class="w3-progress-container">
+    <div class="w3-progressbar" style="width:90%"></div>
+  </div>
+  <p class="w3-wide">Sleeping</p>
+  <div class="w3-progress-container">
+    <div class="w3-progressbar" style="width:85%"></div>
+  </div>
+  <p class="w3-wide">Programming</p>
+  <div class="w3-progress-container">
+    <div class="w3-progressbar" style="width:75%"></div>
+  </div>
 </div>
 
-<!--
-Second Parallax Image with Portfolio Text 
-<div class="bgimg-1 w3-display-container" id="projects" style="top:-10px">
-
+<div class="w3-row w3-center w3-dark-grey w3-padding-16">
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">14+</span><br>
+    Farts Blown
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">55+</span><br>
+    Sandwiches Eaten
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">89+</span><br>
+    Diarrhea Sessions
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">150+</span><br>
+    Memes
+  </div>
 </div>
-!-->
+
+<div id="projects" style="margin-top: -50px">
+  <div id="parallaxAnimation1" style="margin-top:-8px;">
+     <script src="js/Parallax_1.js"></script>
+
+     <div class="w3-center" style="margin-top: -120px;"">
+      <span class="w3-center w3-xxlarge w3-black w3-wide w3-padding-small">PROJECTS</span>
+    </div>
+
+  </div>
+</div>
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64">
@@ -175,56 +198,6 @@ Second Parallax Image with Portfolio Text
   </div>
 </div>
 
-<!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
-
-  <center><p><em>Fancy italics</em></p></center>
-  <p>[Bio text goes here]</p>
-  <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b>[Some title]</b></p><br>
-      <img src="/images/sloth.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="[Image caption]">
-    </div>
-
-    <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>[More text]</p>
-    </div>
-  </div>
-  <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
-  <p class="w3-wide">Eating</p>
-  <div class="w3-progress-container">
-    <div class="w3-progressbar" style="width:90%"></div>
-  </div>
-  <p class="w3-wide">Sleeping</p>
-  <div class="w3-progress-container">
-    <div class="w3-progressbar" style="width:85%"></div>
-  </div>
-  <p class="w3-wide">Programming</p>
-  <div class="w3-progress-container">
-    <div class="w3-progressbar" style="width:75%"></div>
-  </div>
-</div>
-
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">14+</span><br>
-    Farts Blown
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">55+</span><br>
-    Sandwiches Eaten
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">89+</span><br>
-    Diarrhea Sessions
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150+</span><br>
-    Memes
-  </div>
-</div>
 
 <!-- Third Parallax Image with Portfolio Text -->
 <div id="parallaxAnimation2">

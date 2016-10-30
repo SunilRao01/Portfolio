@@ -35,7 +35,7 @@ function initializeBackground()
 	camera.position.z = 100;
 	renderer = new THREE.WebGLRenderer();
 	renderer.setPixelRatio(window.devicePixelRatio);
-	renderer.setSize(window.innerWidth, (window.innerHeight/2)+5);
+	renderer.setSize(window.innerWidth, (window.innerHeight/2));
 	renderer.sortObjects = false;
 	container.appendChild(renderer.domElement);
 
