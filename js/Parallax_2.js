@@ -24,7 +24,7 @@ function initializeParallaxBackground_2()
 
 	document.body.appendChild(parallaxContainer_2);
 	
-	window.addEventListener( 'resize', onWindowResize, false );
+	window.addEventListener('resize', onWindowResize, false );
 }
 
 function onWindowResize( event ) 
