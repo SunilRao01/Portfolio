@@ -101,8 +101,6 @@ function animateParallax_1()
 		{
 			sceneObject.rotation.y += parallaxAnimationSpeed_1;
 		}
-
-		
 	}
 
 	renderParallax_1();

@@ -79,7 +79,7 @@ function renderParallax_2()
 {
 	parallaxCamera_2.updateMatrixWorld();
 
-	uniforms.time.value += 0.05;
+	uniforms.time.value += 0.01;
 
 	parallaxRenderer_2.render(parallaxScene_2, parallaxCamera_2);
 }

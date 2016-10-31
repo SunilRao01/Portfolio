@@ -82,16 +82,28 @@ p.small
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
+  <h2 class="w3-center">ABOUT ME</h2>
 
   <center><p><em>Fancy italics</em></p></center>
-  <p>[Bio text goes here]</p>
+  <p>H</p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <p><b>[Some title]</b></p><br>
-      <img src="/images/sloth.jpg" class="w3-round w3-image w3-opacity w3-hover-opacity-off" alt="[Image caption]">
+      <img src="images/sloth.jpg" class="w3-round w3-image" width="480" height="240">
     </div>
 
     <!-- Hide this text on small devices -->
@@ -132,6 +144,27 @@ p.small
     Memes
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div id="projects" style="margin-top: -50px">
   <div id="parallaxAnimation1" style="margin-top:-8px;">
@@ -184,7 +217,10 @@ p.small
     <div class="w3-col m3">
       <img src="images/sloth.jpg" style="width:100%" onclick="displayModal(this)" class="w3-hover-opacity" alt="Sailing">
     </div>
+
+    <!--
     <button class="w3-btn w3-light-grey w3-padding-xlarge" style="margin-top:64px">LOAD MORE (?)</button>
+    !-->
   </div>
 </div>
 
@@ -205,8 +241,7 @@ p.small
 
 
 
-
-
+<!-- CONTACTS !-->
 
 
 
@@ -227,10 +262,11 @@ p.small
         vec2 p = -1.0 + 2.0 * gl_FragCoord.xy / resolution.xy;
         float a = time*40.0;
         float d,e,f,g = 1.0/40.0,h,i,r,q;
-        e = 400.0*(p.x*0.5+0.5);
-        f = 400.0*(p.y*0.5+0.5);
+        e = 200.0*(p.x*0.5+0.5);
+        f = 200.0*(p.y*0.5+0.5);
         i = 200.0+sin(e*g+a/150.0)*20.0;
         d = 200.0+cos(f*g/2.0)*18.0+cos(e*g)*7.0;
+
         r = sqrt(pow(abs(i-e),2.0)+pow(abs(d-f),2.0));
         q = f/r;
         e = (r*cos(q))-a/2.0;f=(r*sin(q))-a/2.0;
@@ -240,7 +276,7 @@ p.small
         h = sin(f*g)*144.0-sin(e*g)*212.0*p.x;
         h = (h+(f-e)*q+sin(r-(a+h)/7.0)*10.0+i/4.0)*g;
         i += cos(h*2.3*sin(a/350.0-q))*184.0*sin(q-(r*4.3+a/12.0)*g)+tan(r*g+h)*184.0*cos(r*g+h);
-        i = mod(i/5.6,256.0)/64.0;
+        i = mod(i/5.6,128.0)/32.0;
         
         if(i<0.0)
         {
@@ -296,7 +332,7 @@ p.small
 
 
 
-
+<!-- BOTTOM !-->
 
 
 
