@@ -1,7 +1,7 @@
 
 var parallaxContainer_2, parallaxCamera_2, parallaxRenderer_2;
 var parallaxScene_2;
-
+var uniforms;
 
 initializeParallaxBackground_2();
 
@@ -10,20 +10,39 @@ animateParallax_2();
 function initializeParallaxBackground_2()
 {
 	parallaxContainer_2 = document.getElementById('parallaxAnimation2');
-	parallaxScene_2 = new THREE.Scene();
-	parallaxScene_2.background = new THREE.Color(0x000066);
-	parallaxCamera_2 = new THREE.OrthographicCamera(window.innerWidth / -2, window.innerWidth / 2
-				, window.innerHeight / 2, (window.innerHeight / -2), 1, 1000);
+	
+	parallaxCamera_2 = new THREE.Camera();
+	parallaxCamera_2.position.z = 1;
 
-	parallaxCamera_2.position.z = 100;
+	parallaxScene_2 = new THREE.Scene();
+	
+	var geometry = new THREE.PlaneBufferGeometry( 2, 2 );
+	uniforms = 
+	{
+		time:       { value: 1.0 },
+		resolution: { value: new THREE.Vector2() }
+	};
+	
+	var material = new THREE.ShaderMaterial
+	( {
+		uniforms: uniforms,
+		vertexShader: document.getElementById( 'vertexShader' ).textContent,
+		fragmentShader: document.getElementById( 'fragmentShader' ).textContent
+	} );
+
+	var mesh = new THREE.Mesh( geometry, material );
+	parallaxScene_2.add( mesh );
+
 	parallaxRenderer_2 = new THREE.WebGLRenderer();
 	parallaxRenderer_2.setPixelRatio(window.devicePixelRatio);
-	parallaxRenderer_2.setSize(window.innerWidth, (window.innerHeight/6));
-	parallaxRenderer_2.sortObjects = false;
+	parallaxRenderer_2.setSize(window.innerWidth, (window.innerHeight/6));	
 	parallaxContainer_2.appendChild(parallaxRenderer_2.domElement);
 
 	document.body.appendChild(parallaxContainer_2);
 	
+	uniforms.resolution.value.x = renderer.domElement.width;
+	uniforms.resolution.value.y = renderer.domElement.height;
+
 	window.addEventListener('resize', onWindowResize, false );
 }
 
@@ -60,31 +79,7 @@ function renderParallax_2()
 {
 	parallaxCamera_2.updateMatrixWorld();
 
+	uniforms.time.value += 0.05;
+
 	parallaxRenderer_2.render(parallaxScene_2, parallaxCamera_2);
-}
-
-function getRandomArbitrary(min, max) 
-{
-  return Math.round(Math.random() * (max - min) + min);
-}
-
-var calculatedNewPositions = false;
-
-function animateLine(currentLine, neg)
-{
-	for (var i = 0; i < currentLine.geometry.vertices.length; i++)
-	{
-		if (!neg)
-		{
-			currentLine.geometry.vertices[i].y = (Math.sin((i + theta) * alpha) * beta) + currentLine.originalYPosition;
-		}
-		else
-		{
-			currentLine.geometry.vertices[i].y = (Math.sin((i + theta) * alpha) * -beta) + currentLine.originalYPosition;
-		}
-
-		currentLine.geometry.verticesNeedUpdate = true;
-	}
-
-	theta += thetaRate;
 }
