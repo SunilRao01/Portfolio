@@ -24,6 +24,44 @@ p.small
 
 .menubar-text {color: #fff;}
 
+.tooltip
+{
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltipcat
+{
+  visibility: hidden;
+  width: 240px;
+  height: 240px;
+  background-color: black;
+  background-image: url("images/cats.jpg");
+  background-size: 240px 240px;
+  position: absolute;
+  z-index: 1;
+  top: -105px;
+  right: 180%;
+}
+
+.tooltip .tooltipcat::after
+{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  margin-top: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent transparent black;
+}
+
+.tooltip:hover .tooltipcat
+{
+  visibility: visible;
+}
+
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-width: 1024px) {
     .bgimg-1, .bgimg-2, .bgimg-3 {
@@ -95,53 +133,22 @@ p.small
 
 
 <!-- Container (About Section) -->
-<div class="w3-content w3-container w3-padding-64" id="about">
+<div class="w3-content w3-container w3-padding-64" style="margin-top: -50px" id="about">
   <h2 class="w3-center">ABOUT ME</h2>
 
-  <center><p><em>Fancy italics</em></p></center>
-  <p>H</p>
+  <p>My name is Sunil Rao and I'm a software developer operating in the Portland, OR area. My skills lie in the creation of interactive graphical applications as well as web applications. I am also a human being that runs solely on playing with and looking at pictures of my sister's </p>
+  <div class="tooltip">cats<span class="tooltipcat"></span></div>.
+
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b>[Some title]</b></p><br>
-      <img src="images/sloth.jpg" class="w3-round w3-image" width="480" height="240">
+      <p><b>Yours truly</b></p>
+      <img src="images/me.jpg" class="w3-round w3-image" width="480" height="240">
     </div>
 
     <!-- Hide this text on small devices -->
-    <div class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>[More text]</p>
+    <div class="w3-col m6 w3-padding-large">
+      <br><br><p>Welcome to my portfolio! With technology seeping into our everyday lives, ranging from the rise of the "internet of things" to a large segment of the population relying on social media services to get their news, now more than ever is it imporant to build our applications and services with care and responsibility. My work ranges from games raising awareness of mental health issues to web applications that increase voter engagement with local/state elections. Below you can find my projects and work experience.</p>
     </div>
-  </div>
-  <p class="w3-large w3-center w3-padding-16">Im really good at:</p>
-  <p class="w3-wide">Eating</p>
-  <div class="w3-progress-container">
-    <div class="w3-progressbar" style="width:90%"></div>
-  </div>
-  <p class="w3-wide">Sleeping</p>
-  <div class="w3-progress-container">
-    <div class="w3-progressbar" style="width:85%"></div>
-  </div>
-  <p class="w3-wide">Programming</p>
-  <div class="w3-progress-container">
-    <div class="w3-progressbar" style="width:75%"></div>
-  </div>
-</div>
-
-<div class="w3-row w3-center w3-dark-grey w3-padding-16">
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">14+</span><br>
-    Test
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">55+</span><br>
-    Test
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">89+</span><br>
-    Test
-  </div>
-  <div class="w3-quarter w3-section">
-    <span class="w3-xlarge">150+</span><br>
-    Memes
   </div>
 </div>
 
@@ -179,43 +186,46 @@ p.small
 
 <!-- Container (Portfolio Section) -->
 <div class="w3-content w3-container w3-padding-64">
-  <h3 class="w3-center">[Work Title]</h3>
-  <p class="w3-center"><em>[Work Description? Work Description]<br> Click on the images to make them bigger</em></p><br>
-
+  <br>
+  <br>
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
+    <!-- Inner Vision -->
     <div class="w3-col m3">
-      <img src="images/sloth.jpg" style="width:100%" onclick="displayModal(this)" class="w3-hover-opacity" alt="Harry Sloth">
+      <img src="images/projects/inner_vision/Inner-Vision-SS-2.png" style="width:220px;height:150px;" onclick="displayModal(this)" class="w3-hover-opacity" title="Inner Vision" alt="A flash game created to increase mental health awareness, and to stress the importance of speaking out/connecting with one another when distressed." data-play-link="http://sunil-rao.com/wp-content/uploads/Inner-Vision.swf">
     </div>
 
+    <!-- Hawkeye -->
     <div class="w3-col m3">
-      <img src="images/sloth.jpg" style="width:100%" onclick="displayModal(this)" class="w3-hover-opacity" alt="Henry Sloth">
+      <img src="images/projects/Hawkeye/site.png" style="width:220px;height:150px;" onclick="displayModal(this)" class="w3-hover-opacity" title="Hawkeye" alt="A web application that will display local state elected government officials, and their stances on major issues. The purpose of this application is to increase voter engagement in state elections, in turn resulting in a higher voter turnout for the midterms in 2018." data-project-link="https://github.com/SunilRao01/Hawkeye">
     </div>
 
+    <!-- 7DFPS -->
     <div class="w3-col m3">
-      <img src="images/sloth.jpg" style="width:100%" onclick="displayModal(this)" class="w3-hover-opacity" alt="Hugh Sloth">
+      <img src="images/projects/7dfps/7dfps_hunter.png" style="width:220px;height:150px;" onclick="displayModal(this)" class="w3-hover-opacity" title="7DFPS: Break Through" alt="A game created in 7 days. I experimented heavily with Unity's shader engine, which uses GLSL, to create holographic/transparent rendering effects." data-project-link="https://github.com/SunilRao01/7DFPS">
     </div>
 
+    <!-- The Museum -->
     <div class="w3-col m3">
-      <img src="images/sloth.jpg" style="width:100%" onclick="displayModal(this)" class="w3-hover-opacity" alt="Howard Sloth">
+      <img src="images/projects/the_museum/museum_leveldesign.png" style="width:220px;height:150px;" onclick="displayModal(this)" class="w3-hover-opacity" title="The Museum" title="The Museum" alt="A narrative game that focuses on a character's life and how she used the act of interpretating paintings at her local art museum to solver her daily life problems." data-project-link="https://github.com/SunilRao01/The-Museum">
     </div>
   </div>
 
   <div class="w3-row-padding w3-center w3-section">
     <div class="w3-col m3">
-      <img src="images/sloth.jpg" style="width:100%" onclick="displayModal(this)" class="w3-hover-opacity" alt="The mist">
+      <img src="images/projects/solar-system-viewer/overview.png" style="width:220px;height:150px;" onclick="displayModal(this)" class="w3-hover-opacity" title="Solar System Viewer" alt="A 3D solar system viewer that displays information about each solar body that the user clicks on." data-project-link="https://github.com/SunilRao01/Solar-System-Viewer" data-play-link="http://ec2-54-148-22-164.us-west-2.compute.amazonaws.com:3000/" >
     </div>
 
     <div class="w3-col m3">
-      <img src="images/sloth.jpg" style="width:100%" onclick="displayModal(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+      <img src="images/projects/sol/Capture.png" style="width:220px;height:150px;" onclick="displayModal(this)" class="w3-hover-opacity" title="Sol" alt="A 3D interactive music application that binds together the music the user is hearing with the rendering and geometry of the scene (i.e. thickness of the lines, shape of the mesh)" data-project-link="https://github.com/SunilRao01/Sol">
     </div>
 
     <div class="w3-col m3">
-      <img src="images/sloth.jpg" style="width:100%" onclick="displayModal(this)" class="w3-hover-opacity" alt="Empty ghost train">
+      <img src="images/projects/tv_king/level_1_tvs.png" style="width:220px;height:150px;" onclick="displayModal(this)" class="w3-hover-opacity" title="TV King" alt="A 2D puzzle game that I've been working on for the last several months in my spare time. It is a grid-based puzzle game where the player finds themselved trapped in television, and must traverse through the world to find the exit. Since I plan on selling this game in the future, there is no public source code repository or playable build but you can follow the progress of the development of the game on my game dev blog below."  data-blog-link="http://sunil-blog.nfshost.com/">
     </div>
 
     <div class="w3-col m3">
-      <img src="images/sloth.jpg" style="width:100%" onclick="displayModal(this)" class="w3-hover-opacity" alt="Sailing">
+      <img src="images/projects/drill/World1.png" style="width:220px;height:150px;" onclick="displayModal(this)" class="w3-hover-opacity" title="Drill" alt="A small Unity game made in 48 hours where the player is tasked to drill down and hit every circle. The game is combination of timing and puzzle solving." data-project-link="https://github.com/SunilRao01/Drill">
     </div>
 
     <!--
@@ -225,12 +235,32 @@ p.small
 </div>
 
 <!-- Modal for full size images on click-->
-<div id="modal_1" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-closebtn w3-text-white w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image">&times;</span>
+<div id="modal_1" class="w3-modal">
+  <!-- Close Button -->
+  <span class="w3-closebtn w3-text-white w3-opacity w3-hover-opacity-off w3-xxlarge w3-container w3-display-topright" title="Close Modal Image"  onclick="hideModal()">&times;</span>
 
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="modelImage" class="w3-image" style="width:50%">
-    <p id="caption" class="w3-opacity w3-large"></p>
+  <div class="w3-modal-content w3-center w3-transparent w3-padding-64">
+    <div class="w3-container w3-black">
+      <!-- Modal Title -->
+      <h2 id="title" style="color:white"></h2>
+
+      <!-- Modal Image -->
+      <img id="modelImage" class="w3-image" style="width:50%">
+      
+      <!-- Modal image caption -->
+      <p id="caption" class="w3-opacity" style="color:white;text-align: left"></p>
+
+      <center>
+      <!-- Modal links to project -->
+      <b><p><a id="projectLink" style="color:white;text-align: center;display:none;"></a></p></b>
+      
+      <!-- Modal links to project -->
+      <b><p><a id="playLink" style="color:white;text-align: center;display:none;"><br></a></p></b>
+
+      <!-- Modal links to blog -->
+      <b><p><a id="blogLink" style="color:white;text-align: center;display:none;"><br></a></p></b>
+      </center>
+    </div>
   </div>
 </div>
 
@@ -338,8 +368,6 @@ p.small
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64">
-  <h3 class="w3-center">WHERE I WORK</h3>
-
   <div class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
       <!-- Add Google Maps -->
@@ -347,9 +375,10 @@ p.small
     </div>
     <div class="w3-col m8 w3-container w3-section">
       <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Portland, OR<br>
-        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +1 (630) 457-6692<br>
-        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: srao0194@gmail.com<br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i><a href="http://maps.google.com/?q=Portland,+OR" target="_blank">Portland, OR</a><br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <a href="tel:+1-630-457-6692">+1 (630) 457-6692</a><br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <a href="mailto:srao0194@gmail.com">srao0194@gmail.com</a><br>
+        <i class="fa fa-skype fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> helloworld10101<br>
       </div>
     </div>
   </div>
@@ -358,11 +387,10 @@ p.small
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
   <div class="w3-xlarge w3-padding-32">
-    <a target="_blank" href="mailto:srao0194@gmail.com" class="w3-hover-text-orange"><i class="fa fa-envelope"></i></a>
     <a target="_blank" href="https://twitter.com/SunilRao101" class="w3-hover-text-light-blue"><i class="fa fa-twitter"></i></a>
     <a target="_blank" href="https://www.linkedin.com/in/srao0194" class="w3-hover-text-indigo"><i class="fa fa-linkedin"></i></a>
   </div>
-  <p>Created by Sunil Rao, powered by <a href="http://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+  <p>Created by Sunil Rao</p>
 </footer>
  
 <!-- Add Google Maps -->
