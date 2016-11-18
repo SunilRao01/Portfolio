@@ -32,10 +32,10 @@ function displayModal(element)
   var blogLink = document.getElementById("blogLink");
   if (element.dataset.blogLink)
   {
-    playLink.textContent = "Blog";
-    playLink.href = element.dataset.blogLink;
-    playLink.target="_blank";
-    playLink.style.display = "block";
+    blogLink.textContent = "Blog";
+    blogLink.href = element.dataset.blogLink;
+    blogLink.target="_blank";
+    blogLink.style.display = "block";
   }
 }
 
@@ -45,6 +45,7 @@ function hideModal()
   document.getElementById("playLink").style.display = "none";
   document.getElementById("projectLink").style.display = "none";
   document.getElementById("blogLink").style.display = "none";
+  document.getElementById("reception").style.display = "none";
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
