@@ -1,13 +1,13 @@
-
-var imageIndex = 1;
-var imageCount = 1;
-var imagesString;
-
 // Modal Image Gallery
 function displayModal(element) 
 {
   // Clear previous modal images
+  var modalImagesParent = document.getElementById("modalImages");
 
+  while (modalImagesParent.firstChild)
+  {
+    modalImagesParent.removeChild(modalImagesParent.firstChild);
+  }
 
   document.getElementById("modal_1").style.display = "block";
 
@@ -48,40 +48,18 @@ function displayModal(element)
   }
 
   // Set modal images
-  var modalImageCenter = document.getElementById("modalImageCenter");
-  var modalImageLeft = document.getElementById("modalImageLeft");
-  var modalImageRight = document.getElementById("modalImageRight");
-  modalImageCenter.src = "";
-  modalImageLeft.src = "";
-  modalImageRight.src = "";
-
-  imageIndex = 1;
-
   imagesString = element.dataset.images.toString().split(",");
   imageCount = imagesString.length;
-  console.log("Image Count: " + imageCount);
+
   // Either 1 image, or 3+
-  if (imageCount == 1)
+  for (var i = 0; i < imageCount; i++)
   {
-    imageIndex = 0;
-
-    modalImageCenter.src = imagesString;
-  }
-  else
-  {
-    imageIndex = 1;
-
-    modalImageLeft.src = imagesString[imageIndex-1];
-    modalImageCenter.src = imagesString[imageIndex];
-    modalImageRight.src = imagesString[imageIndex+1];
-
-    console.log("Left Image Height: " + modalImageLeft.height);
-    console.log("Center Image Height: " + modalImageCenter.height);
-
-    var leftPosition =  (modalImageCenter.height/2) - (modalImageLeft.height/2);
-    var rightPosition = (modalImageCenter.height/2) - (modalImageRight.height/2);
-    modalImageLeft.style = "margin-top:" + leftPosition + "px";
-    modalImageRight.style = "margin-top:" + rightPosition + "px";
+    var img = document.createElement("img");
+    img.src = imagesString[i];
+    img.style.width = "50%";
+    //img.style.height = "240px";
+    modalImagesParent.appendChild(img);
+    modalImagesParent.appendChild(document.createElement("br"));
   }
 }
 
@@ -92,18 +70,6 @@ function hideModal()
   document.getElementById("projectLink").style.display = "none";
   document.getElementById("blogLink").style.display = "none";
   document.getElementById("reception").style.display = "none";
-}
-
-function updateModalImage(order)
-{
-  if (order < 0)
-  {
-    
-  }
-  else
-  {
-    
-  }
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
