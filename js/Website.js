@@ -1,3 +1,5 @@
+var toolsId;
+
 // Modal Image Gallery
 function displayModal(element) 
 {
@@ -18,6 +20,13 @@ function displayModal(element)
   // Set modal description
   var captionText = document.getElementById("caption");
   captionText.textContent = element.alt;
+
+  // Add tools
+  toolsId = titleText.textContent.toString().toLowerCase().trim();
+  toolsId = toolsId.replace(/\s+/g, '');
+  toolsId += "Tools";
+  var tools = document.getElementById(toolsId);
+  tools.style.display = "block";
 
   // Set hyperlinks
   var projectLink = document.getElementById("projectLink");
@@ -51,13 +60,11 @@ function displayModal(element)
   imagesString = element.dataset.images.toString().split(",");
   imageCount = imagesString.length;
 
-  // Either 1 image, or 3+
   for (var i = 0; i < imageCount; i++)
   {
     var img = document.createElement("img");
     img.src = imagesString[i];
     img.style.width = "50%";
-    //img.style.height = "240px";
     modalImagesParent.appendChild(img);
     modalImagesParent.appendChild(document.createElement("br"));
   }
@@ -69,7 +76,7 @@ function hideModal()
   document.getElementById("playLink").style.display = "none";
   document.getElementById("projectLink").style.display = "none";
   document.getElementById("blogLink").style.display = "none";
-  document.getElementById("reception").style.display = "none";
+  document.getElementById(toolsId).style.display = "none";
 }
 
 // Used to toggle the menu on small screens when clicking on the menu button
