@@ -1,21 +1,22 @@
 var toolsId;
+var modalImagesId;
+var modal = document.getElementById("modal_1");
 
 // Modal Image Gallery
 function displayModal(element) 
 {
-  // Clear previous modal images
-  var modalImagesParent = document.getElementById("modalImages");
-
-  while (modalImagesParent.firstChild)
-  {
-    modalImagesParent.removeChild(modalImagesParent.firstChild);
-  }
-
-  document.getElementById("modal_1").style.display = "block";
+  modal.style.display = "block";
 
   // Set modal title
   var titleText = document.getElementById("title");
   titleText.textContent = element.title;
+
+  // Set modal images
+  modalImagesId = titleText.textContent.toString().toLowerCase().trim();
+  modalImagesId = modalImagesId.replace(/\s+/g, '');
+  modalImagesId += "Images";
+  var modalImages = document.getElementById(modalImagesId);
+  modalImages.style.display = "block";
 
   // Set modal description
   var captionText = document.getElementById("caption");
@@ -55,19 +56,6 @@ function displayModal(element)
     blogLink.target="_blank";
     blogLink.style.display = "block";
   }
-
-  // Set modal images
-  imagesString = element.dataset.images.toString().split(",");
-  imageCount = imagesString.length;
-
-  for (var i = 0; i < imageCount; i++)
-  {
-    var img = document.createElement("img");
-    img.src = imagesString[i];
-    img.style.width = "50%";
-    modalImagesParent.appendChild(img);
-    modalImagesParent.appendChild(document.createElement("br"));
-  }
 }
 
 function hideModal()
@@ -77,7 +65,24 @@ function hideModal()
   document.getElementById("projectLink").style.display = "none";
   document.getElementById("blogLink").style.display = "none";
   document.getElementById(toolsId).style.display = "none";
+  document.getElementById(modalImagesId).style.display = "none";
 }
+
+// Clicking outside of the modal closes it
+window.onclick = function(event)
+{
+  if (event.target == modal)
+  {
+    modal.style.display = "none";
+  }
+}
+
+// Hitting the 'Esccape' key closes modal
+document.addEventListener('keyup', function(e) {
+    if (e.keyCode == 27) {
+        hideModal();
+    }
+});
 
 // Used to toggle the menu on small screens when clicking on the menu button
 function myFunction() 
