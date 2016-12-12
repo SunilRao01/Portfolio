@@ -63,9 +63,10 @@ p.small
 }
 
 /* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
+@media only screen and (max-width: 1450px) {
+    .catstooltip
+    {
+      display: none;
     }
 }
 </style>
@@ -136,12 +137,14 @@ p.small
 <div class="w3-content w3-container w3-padding-64" style="margin-top: -50px" id="about">
   <h2 class="w3-center">ABOUT ME</h2>
 
-  <p>My name is Sunil Rao and I'm a software developer operating in the Portland, OR area. My skills lie in the creation of interactive graphical applications as well as web applications. I am also a human being that runs solely on playing with and looking at pictures of my sister's </p>
-  <div class="tooltip">cats<span class="tooltipcat"></span></div>.
+  <p>My name is Sunil Rao and I'm a software developer operating in the Chicago, IL area. My skills lie in the creation of interactive graphical applications as well as web applications.<div class="catstooltip"> I am also a human being that runs solely on playing with and looking at pictures of my sister's </p>
+  <div class="tooltip">cats<span class="tooltipcat"></span></div></div>.
 
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
-      <p><b>Yours truly</b></p>
+      <br>
+      <br>
+      <br>
       <img src="images/me.jpg" class="w3-round w3-image" width="480" height="240">
     </div>
 
@@ -221,7 +224,7 @@ p.small
 
     <!-- Hawkeye -->
     <div class="w3-col m3">
-      <img src="images/projects/hawkeye/site.PNG" style="width:220px;height:150px;" onclick="displayModal(this)" class="w3-hover-opacity" title="Hawkeye" alt="A work-in-progress web application that will display local state elected government officials, and their stances on major issues. The purpose of this application is to increase voter engagement in state elections, in turn resulting in a higher voter turnout for the midterms in 2018." data-project-link="https://github.com/SunilRao01/Hawkeye">
+      <img src="images/projects/hawkeye/site.PNG" style="width:220px;height:150px;" onclick="displayModal(this)" class="w3-hover-opacity" title="Hawkeye" alt="A work-in-progress web application that will display local state elected government officials, and their stances on major issues. The purpose of this application is to increase voter engagement in state elections, in turn resulting in a higher voter turnout for the midterms in 2018." data-project-link="https://github.com/SunilRao01/Hawkeye" data-play-link="http://ec2-54-148-22-164.us-west-2.compute.amazonaws.com:8080/">
     </div>
 
     <!-- 7DFPS -->
@@ -231,7 +234,7 @@ p.small
 
     <!-- The Museum -->
     <div class="w3-col m3">
-      <img src="images/projects/the-museum/museum_leveldesign.png" style="width:220px;height:150px;" onclick="displayModal(this)" class="w3-hover-opacity" title="The Museum" title="The Museum" alt="An in-development narrative game that focuses on a character's life and how she used the act of interpretating paintings at her local art museum to solver her daily life problems." data-project-link="https://github.com/SunilRao01/The-Museum">
+      <img src="images/projects/the-museum/museum_leveldesign.png" style="width:220px;height:150px;" onclick="displayModal(this)" class="w3-hover-opacity" title="The Museum" title="The Museum" alt="An in-development narrative game that focuses on a character's life and how she used the act of interpretating paintings at her local art museum to solve her daily life problems." data-project-link="https://github.com/SunilRao01/The-Museum">
     </div>
   </div>
 
@@ -241,7 +244,7 @@ p.small
     </div>
 
     <div class="w3-col m3">
-      <img src="images/projects/sol/Capture.png" style="width:220px;height:150px;" onclick="displayModal(this)" class="w3-hover-opacity" title="Sol" alt="A 3D interactive music application that binds together the music the user is hearing with the rendering and geometry of the scene (i.e. thickness of the lines, shape of the mesh)" data-project-link="https://github.com/SunilRao01/Sol">
+      <img src="images/projects/sol/Capture.png" style="width:220px;height:150px;" onclick="displayModal(this)" class="w3-hover-opacity" title="Sol" alt="A 3D interactive music prototype that binds together the music the user is hearing with the rendering and geometry of the scene (i.e. thickness of the lines, shape of the mesh)" data-project-link="https://github.com/SunilRao01/Sol">
     </div>
 
     <div class="w3-col m3">
@@ -354,14 +357,14 @@ p.small
           </div>
         </div>
         <div id="hawkeyeTools" class="w3-row" style="display:none">
-          <div class="w3-col s3 m2 l1 w3-light-green">
-            NodeJS
+          <div class="w3-col s2 m1 l1 w3-light-green">
+            Go
           </div>
           <div class="w3-col s4 m2 l1 w3-lime">
-            ExpressJS
+            SASS
           </div>
           <div class="w3-col s4 m3 l1 w3-light-blue">
-            Bootstrap
+            Skeleton
           </div>
         </div>
         <div id="breakthroughTools" class="w3-row" style="display:none">
@@ -535,19 +538,13 @@ p.small
 
 
 <!-- BOTTOM !-->
-
-
-
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64">
   <div class="w3-row w3-padding-32 w3-section">
-    <div class="w3-col m4 w3-container">
-      <!-- Add Google Maps -->
-      
-    </div>
+    <div class="w3-col m4 w3-container"></div>
     <div class="w3-col m8 w3-container w3-section">
       <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i><a href="http://maps.google.com/?q=Portland,+OR" target="_blank">Portland, OR</a><br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i><a href="http://maps.google.com/?q=Chicago,+IL" target="_blank">Chicago, IL</a><br>
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <a href="tel:+1-630-457-6692">+1 (630) 457-6692</a><br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> <a href="mailto:srao0194@gmail.com">srao0194@gmail.com</a><br>
         <i class="fa fa-skype fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> helloworld10101<br>
