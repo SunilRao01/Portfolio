@@ -1,7 +1,7 @@
 # Portfolio
 A portfolio website showcasing my work.
 
-Current live version: http://sunil-rao.com.s3-website-us-west-2.amazonaws.com/
+Current live version: https://165.227.176.168:7000/
 
 Frameworks:
 - w3.css (CSS Template)
